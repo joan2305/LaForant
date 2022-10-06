@@ -1,922 +1,759 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LaForant's Agents</title>
-    <link rel="stylesheet" href="styleagent.css">
+    <link rel="stylesheet" href="styleagent.css" />
     <script src="jquery-3.5.1.min.js"></script>
     <script src="agent.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigation bar -->
     <div class="navbar">
-        <input type="checkbox" id="show-menu">
-        <label for="show-menu" class="menu-icon">
-            <span>
-                <img src="../hamburger_image/hamburger.png" alt="">
-            </span>
-        </label>
-        <div class="lf_logo">
-            <img src="../logo/lf_logo.png" alt="">
-        </div>
-        <div class="nav-list">
-            <li class="nav-item">
-                <a class="nav-link" href="..//home_page/LaForant Homepage.html" target="_blank">Home</a>
-            </li>
-            <li class="nav-item">
-                <div class="dropdown-container">
-                    <a class="nav-link" href="#" id="shown">Game Info <i class="down"></i></a>
-                    <input type="checkbox" id="show-info">
-                    <label for="show-info">Game Info <i class="down"></i></label>
-                    <div class="dropdown-content">
-                        <a href="../maps/map.html" target="_blank" class="dropdown-link">Maps</a>
-                        <a href="../agents/agent.html" target="_blank" class="dropdown-link">Agents</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item"><a href="../system_requirement/specs.html" target="_blank" class="nav-link">System Requirements</a></li>
-            <li class="nav-item">
-                <div class="dropdown-container">
-                    <a class="nav-link" href="#" id="shown">Social Media <i class="down"></i></a>
-                    <input type="checkbox" id="show-socmed">
-                    <label for="show-socmed">Social Media <i class="down"></i></label>
-                    <div class="dropdown-content">
-                        <a href="https://www.youtube.com/" target="_blank" class="dropdown-link">Youtube</a>
-                        <a href="https://www.facebook.com/" target="_blank" class="dropdown-link">Facebook</a>
-                        <a href="https://twitter.com/" target="_blank" class="dropdown-link">Twitter</a>
-                        <a href="https://www.instagram.com/" target="_blank" class="dropdown-link">Instagram</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item"><a href="../registration/registration.html" target="_blank" class="nav-link">Pre-Register</a></li>
-            <li class="nav-item" id="dummy">Dummy</li>
-        </div>
+      <input type="checkbox" id="show-menu" />
+      <label for="show-menu" class="menu-icon">
+        <span>
+          <img src="../hamburger_image/hamburger.png" alt="" />
+        </span>
+      </label>
+      <div class="lf_logo">
+        <img src="../logo/lf_logo.png" alt="" />
+      </div>
+      <div class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html" target="_blank">Home</a>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown-container">
+            <a class="nav-link" href="#" id="shown">Game Info <i class="down"></i></a>
+            <input type="checkbox" id="show-info" />
+            <label for="show-info">Game Info <i class="down"></i></label>
+            <div class="dropdown-content">
+              <a href="../maps/map.html" target="_blank" class="dropdown-link">Maps</a>
+              <a href="../agents/agent.html" target="_blank" class="dropdown-link">Agents</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a href="../system_requirement/specs.html" target="_blank" class="nav-link">System Requirements</a></li>
+        <li class="nav-item"><a href="../registration/registration.html" target="_blank" class="nav-link">Pre-Register</a></li>
+        <li class="nav-item" id="dummy">Dummy</li>
+      </div>
     </div>
     <!-- End of navbar -->
 
     <!-- Landing Section -->
     <div class="landing">
-        <video src="../video/bg-vid2.mp4" autoplay muted loop></video>
-        <div class="landing-text">
-            <h1>AGENTS</h1>
-        </div>
-        <div class="see-button">SEE ALL AGENTS</div>
+      <video src="../video/bg-vid2.mp4" autoplay muted loop></video>
+      <div class="landing-text">
+        <h1>AGENTS</h1>
+      </div>
+      <div class="see-button">SEE ALL AGENTS</div>
     </div>
     <!-- End of Landing Section -->
 
     <!-- Agent section -->
     <div class="agent-section" id="agent-section">
-        <video src="../video/bg-vid.mp4" autoplay muted loop></video>
-        <div class="dot-wrap">
-            <div class="dots">
-                <img src="images/sage-dot.png" class="dot1 active" alt="">
-                <img src="images/jett-dot.png" class="dot2" alt="">
-                <img src="images/brimstone-dot.png" class="dot3" alt="">
-                <img src="images/sova-dot.png" class="dot4" alt="">
-                <img src="images/omen-dot.png" class="dot5" alt="">
-                <img src="images/reyna-dot.png" class="dot6" alt="">
-                <img src="images/phoenix-dot.png" class="dot7" alt="">
-                <img src="images/viper-dot.png" class="dot8" alt="">
-                <img src="images/cypher-dot.png" class="dot9" alt="">
-                <img src="images/killjoy-dot.png" class="dot10" alt="">
-            </div>
+      <video src="../video/bg-vid.mp4" autoplay muted loop></video>
+      <div class="dot-wrap">
+        <div class="dots">
+          <img src="images/sage-dot.png" class="dot1 active" alt="" />
+          <img src="images/jett-dot.png" class="dot2" alt="" />
+          <img src="images/brimstone-dot.png" class="dot3" alt="" />
+          <img src="images/sova-dot.png" class="dot4" alt="" />
+          <img src="images/omen-dot.png" class="dot5" alt="" />
+          <img src="images/reyna-dot.png" class="dot6" alt="" />
+          <img src="images/phoenix-dot.png" class="dot7" alt="" />
+          <img src="images/viper-dot.png" class="dot8" alt="" />
+          <img src="images/cypher-dot.png" class="dot9" alt="" />
+          <img src="images/killjoy-dot.png" class="dot10" alt="" />
         </div>
-        <div class="main">
-            <div class="img-section">
-                <img src="images/sage.png" class="agents a1"/>  
-                <img src="images/jett.png" class="agents a2"/>  
-                <img src="images/brimstone.png" class="agents a3"/> 
-                <img src="images/sova.png" class="agents a4"/>
-                <img src="images/omen.png" class="agents a5"/>
-                <img src="images/reyna.png" class="agents a6"/>
-                <img src="images/phoenix.png" class="agents a7"/>
-                <img src="images/viper.png" class="agents a8"/>
-                <img src="images/cypher.png" class="agents a9"/>
-                <img src="images/killjoy.png" class="agents a10"/>
+      </div>
+      <div class="main">
+        <div class="img-section">
+          <img src="images/sage.png" class="agents a1" />
+          <img src="images/jett.png" class="agents a2" />
+          <img src="images/brimstone.png" class="agents a3" />
+          <img src="images/sova.png" class="agents a4" />
+          <img src="images/omen.png" class="agents a5" />
+          <img src="images/reyna.png" class="agents a6" />
+          <img src="images/phoenix.png" class="agents a7" />
+          <img src="images/viper.png" class="agents a8" />
+          <img src="images/cypher.png" class="agents a9" />
+          <img src="images/killjoy.png" class="agents a10" />
+        </div>
+        <div class="info-section">
+          <div class="agent1">
+            <div class="agent-details">
+              <div class="name">
+                <div class="agent-name">
+                  <div>SENTINEL</div>
+                  <div>1. SAGE</div>
+                </div>
+              </div>
             </div>
-            <div class="info-section">
-                <div class="agent1">
-                    <div class="agent-details">
-                        <div class="name">
-                            <div class="agent-name">
-                                <div>SENTINEL</div>
-                                <div>1. SAGE</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p>
-                            The stronghold of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off aggressive pushes, she provides a calm center to a hellish fight.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="agent2">
-                    <div class="agent-details">
-                        <div class="name">
-                            <div class="agent-name">
-                                <div>DUELIST</div>
-                                <div>2. JETT</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p>
-                            Representing her home country of South Korea, Jett's agile and evasive fighting style lets her take risks no one else can. She runs circles around every skirmish, cutting enemies before they even know what hit them.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="agent3">
-                    <div class="agent-details">
-                        <div class="name">
-                            <div class="agent-name">
-                                <div>CONTROLLER</div>
-                                <div>3. BRIMSTONE</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p>
-                            Joining from the USA, Brimstone's orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and from a distance make him an unmatched boots-on-the-ground commander.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="agent4">
-                    <div class="agent-details">
-                        <div class="name">
-                            <div class="agent-name">
-                                <div>INITIATOR</div>
-                                <div>4. SOVA</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p>
-                            Born from the eternal winter of Russia's tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot hide.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="agent5">
-                    <div class="agent-details">
-                        <div class="name">
-                            <div class="agent-name">
-                                <div>CONTROLLER</div>
-                                <div>5. OMEN</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p>
-                            A phantom of a memory, Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to learn where he might strike next.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="agent6">
-                    <div class="agent-details">
-                        <div class="name">
-                            <div class="agent-name">
-                                <div>DUELIST</div>
-                                <div>6. REYNA</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p>
-                            Forged in the heart of Mexico, Reyna dominates single combat, popping off with each kill she scores. Her capability is only limited by her raw skill, making her highly dependent on performance.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="agent7">
-                    <div class="agent-details">
-                        <div class="name">
-                            <div class="agent-name">
-                                <div>DUELIST</div>
-                                <div>7. PHOENIX</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p>
-                            Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he's got backup or not, he'll rush into a fight on his own terms.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="agent8">
-                    <div class="agent-details">
-                        <div class="name">
-                            <div class="agent-name">
-                                <div>CONTROLLER</div>
-                                <div>8. VIPER</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p>
-                            The American chemist, Viper deploys an array of poisonous chemical devices to control the battlefield and cripple the enemy's vision. If the toxins don't kill her prey, her mind games surely will.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="agent9">
-                    <div class="agent-details">
-                        <div class="name">
-                            <div class="agent-name">
-                                <div>SENTINEL</div>
-                                <div>9. CYPHER</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p>
-                            The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy's every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="agent10">
-                    <div class="agent-details">
-                        <div class="name">
-                            <div class="agent-name">
-                                <div>SENTINEL</div>
-                                <div>10. KILLJOY</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bio">
-                        <p>
-                            The genius of Germany. Killjoy secures the battlefield with ease using her arsenal of inventions. If the damage from her gear doesn't stop her enemies, her robots' debuff will help make short work of them.
-                        </p>
-                    </div>
-                </div>
-
+            <div class="bio">
+              <p>The stronghold of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off aggressive pushes, she provides a calm center to a hellish fight.</p>
             </div>
+          </div>
 
-            <div class="next">
-                <img src="images/next.png" alt="">
+          <div class="agent2">
+            <div class="agent-details">
+              <div class="name">
+                <div class="agent-name">
+                  <div>DUELIST</div>
+                  <div>2. JETT</div>
+                </div>
+              </div>
             </div>
-            <div class="pre">
-                <img src="images/pre.png" alt="">
+            <div class="bio">
+              <p>Representing her home country of South Korea, Jett's agile and evasive fighting style lets her take risks no one else can. She runs circles around every skirmish, cutting enemies before they even know what hit them.</p>
             </div>
+          </div>
+
+          <div class="agent3">
+            <div class="agent-details">
+              <div class="name">
+                <div class="agent-name">
+                  <div>CONTROLLER</div>
+                  <div>3. BRIMSTONE</div>
+                </div>
+              </div>
+            </div>
+            <div class="bio">
+              <p>Joining from the USA, Brimstone's orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and from a distance make him an unmatched boots-on-the-ground commander.</p>
+            </div>
+          </div>
+
+          <div class="agent4">
+            <div class="agent-details">
+              <div class="name">
+                <div class="agent-name">
+                  <div>INITIATOR</div>
+                  <div>4. SOVA</div>
+                </div>
+              </div>
+            </div>
+            <div class="bio">
+              <p>
+                Born from the eternal winter of Russia's tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot
+                hide.
+              </p>
+            </div>
+          </div>
+
+          <div class="agent5">
+            <div class="agent-details">
+              <div class="name">
+                <div class="agent-name">
+                  <div>CONTROLLER</div>
+                  <div>5. OMEN</div>
+                </div>
+              </div>
+            </div>
+            <div class="bio">
+              <p>A phantom of a memory, Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to learn where he might strike next.</p>
+            </div>
+          </div>
+
+          <div class="agent6">
+            <div class="agent-details">
+              <div class="name">
+                <div class="agent-name">
+                  <div>DUELIST</div>
+                  <div>6. REYNA</div>
+                </div>
+              </div>
+            </div>
+            <div class="bio">
+              <p>Forged in the heart of Mexico, Reyna dominates single combat, popping off with each kill she scores. Her capability is only limited by her raw skill, making her highly dependent on performance.</p>
+            </div>
+          </div>
+
+          <div class="agent7">
+            <div class="agent-details">
+              <div class="name">
+                <div class="agent-name">
+                  <div>DUELIST</div>
+                  <div>7. PHOENIX</div>
+                </div>
+              </div>
+            </div>
+            <div class="bio">
+              <p>Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he's got backup or not, he'll rush into a fight on his own terms.</p>
+            </div>
+          </div>
+
+          <div class="agent8">
+            <div class="agent-details">
+              <div class="name">
+                <div class="agent-name">
+                  <div>CONTROLLER</div>
+                  <div>8. VIPER</div>
+                </div>
+              </div>
+            </div>
+            <div class="bio">
+              <p>The American chemist, Viper deploys an array of poisonous chemical devices to control the battlefield and cripple the enemy's vision. If the toxins don't kill her prey, her mind games surely will.</p>
+            </div>
+          </div>
+
+          <div class="agent9">
+            <div class="agent-details">
+              <div class="name">
+                <div class="agent-name">
+                  <div>SENTINEL</div>
+                  <div>9. CYPHER</div>
+                </div>
+              </div>
+            </div>
+            <div class="bio">
+              <p>The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy's every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.</p>
+            </div>
+          </div>
+
+          <div class="agent10">
+            <div class="agent-details">
+              <div class="name">
+                <div class="agent-name">
+                  <div>SENTINEL</div>
+                  <div>10. KILLJOY</div>
+                </div>
+              </div>
+            </div>
+            <div class="bio">
+              <p>The genius of Germany. Killjoy secures the battlefield with ease using her arsenal of inventions. If the damage from her gear doesn't stop her enemies, her robots' debuff will help make short work of them.</p>
+            </div>
+          </div>
         </div>
 
-        <div class="skill-section">
-            <div class="skill-wrap1">
-                <div class="skill-title">
-                    <h1>SKILLS</h1>
-                </div>
-                <div class="skill">
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/sage-skill1.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                SLOW ORB
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a slowing orb. FIRE to throw a slowing orb forward that detonates upon landing, creating a lingering field that slows players caught inside of it.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/sage-skill2.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                HEALING ORB
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a healing orb. FIRE with your crosshairs over a damaged ally to activate a heal-over-time on them. ALT FIRE while Sage is damaged to activate a self heal-over-time.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/sage-skill3.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                BARRIER ORB
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a barrier orb. FIRE places a solid wall. ALT FIRE rotates the targeter.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/sage-skill4.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                RESURRECT
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a resurrection ability. FIRE with your crosshairs placed over a dead ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="skill-wrap2">
-                <div class="skill-title">
-                    <h1>SKILLS</h1>
-                </div>
-                <div class="skill">
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/jett-skill1.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                UPDRAFT
-                            </h2>
-                            <p class="skill-info">
-                                INSTANTLY propel Jett high into the air.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/jett-skill2.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                TAILWIND
-                            </h2>
-                            <p class="skill-info">
-                                INSTANTLY propel Jett in the direction she is moving. If Jett is standing still, she will propel forward.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/jett-skill3.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                CLOUDBURST
-                            </h2>
-                            <p class="skill-info">
-                                INSTANTLY throw a projectile that expands into a brief vision-blocking cloud on impact with a surface. HOLD the ability key to curve the smoke in the direction of your crosshair.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/jett-skill4.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                BLADE STORM
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a set of highly accurate knives that recharge on killing an opponent. FIRE to throw a single knife at your target. ALTERNATE FIRE to throw all remaining daggers at your target.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="skill-wrap3">
-                <div class="skill-title">
-                    <h1>SKILLS</h1>
-                </div>
-                <div class="skill">
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/brim-skill1.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                INCENDIARY
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/brim-skill2.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                SKY SMOKE
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/brim-skill3.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                STIM BEACON
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/brim-skill4.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                ORBITAL STRIKE
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-wrap4">
-                <div class="skill-title">
-                    <h1>SKILLS</h1>
-                </div>
-                <div class="skill">
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/sova-skill1.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                SHOCK BOLT
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a bow with a shock bolt. FIRE to send the explosive forward, detonating upon collision and damaging players nearby. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/sova-skill2.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                RECON BOLT
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a bow with a recon bolt. FIRE to send the recon bolt forward, activating upon collision and revealing the location of nearby enemies caught in the line of sight of the bolt. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/sova-skill3.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                OWL DRONE
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP an owl drone. FIRE to deploy and take control of movement of the drone. While in control of the drone, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/sova-skill4.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                HUNTER’S FURY
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a bow with three long-range wall-piercing energy blasts. FIRE to release an energy blast in a line in front of Sova, dealing damage and revealing the location of enemies caught in the line. This ability can be RE-USED up to two more times while the ability timer is active.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-wrap5">
-                <div class="skill-title">
-                    <h1>SKILLS</h1>
-                </div>
-                <div class="skill">
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/omen-skill1.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                PARANOIA
-                            </h2>
-                            <p class="skill-info">
-                                INSTANTLY fire a shadow projectile forward, briefly reducing the vision range of all players it touches. This projectile can pass straight through walls.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/omen-skill2.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                DARK COVER
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a shadow orb and see its range indicator. FIRE to throw the shadow orb to the marked location, creating a long-lasting shadow sphere that blocks vision. HOLD ALTERNATE FIRE while targeting to move the marker further away. HOLD the ability key with targeting to move the market closer.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/omen-skill3.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                SHROUDED STEP
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a shadow walk ability and see its range indicator. FIRE to begin a brief channel, then teleport to the marked location.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/omen-skill4.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                FROM THE SHADOWS
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a tactical map. FIRE to begin teleporting to the selected location. While teleporting, Omen will appear as a Shade that can be destroyed by an enemy to cancel his teleport.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-wrap6">
-                <div class="skill-title">
-                    <h1>SKILLS</h1>
-                </div>
-                <div class="skill">
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/reyna-skill1.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                DEVOUR
-                            </h2>
-                            <p class="skill-info">
-                                Enemies killed by Reyna leave behind Soul Orbs that last 3 seconds. INSTANTLY consume a nearby soul orb, rapidly healing for a short duration. Health gained through this skill exceeding 100 will decay over time. If EMPRESS is active, this skill will automatically cast and not consume the orb.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/reyna-skill2.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                DISMISS
-                            </h2>
-                            <p class="skill-info">
-                                INSTANTLY consume a nearby soul orb, becoming intangible for a short duration. If EMPRESS is active, also become invisible.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/reyna-skill3.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                LEER
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP an ethereal destructible eye. ACTIVATE to cast the eye a short distance forward. The eye will Nearsight all enemies who look at it.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/reyna-skill4.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                EMPRESS
-                            </h2>
-                            <p class="skill-info">
-                                INSTANTLY enter a frenzy, increasing firing speed, equip and reload speed dramatically. Scoring a kill renews the duration.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-wrap7">
-                <div class="skill-title">
-                    <h1>SKILLS</h1>
-                </div>
-                <div class="skill">
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/phoenix-skill1.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                CURVEBALL
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a flare orb that takes a curving path and detonates shortly after throwing. FIRE to curve the flare orb to the left, detonating and blinding any player who sees the orb. ALTERNATE FIRE to curve the flare orb to the right.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/phoenix-skill2.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                HOT HANDS
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a fireball. FIRE to throw a fireball that explodes after a set amount of time or upon hitting the ground, creating a lingering fire zone that damages enemies.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/phoenix-skill3.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                BLAZE
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a flame wall. FIRE to create a line of flame that moves forward, creating a wall of fire that blocks vision and damages players passing through it. HOLD FIRE to bend the wall in the direction of your crosshair.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/phoenix-skill4.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                RUN IT BACK
-                            </h2>
-                            <p class="skill-info">
-                                INSTANTLY place a marker at Phoenix’s location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-wrap8">
-                <div class="skill-title">
-                    <h1>SKILLS</h1>
-                </div>
-                <div class="skill">
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/viper-skill1.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                POISON CLOUD
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a gas emitter. FIRE to throw the emitter that perpetually remains throughout the round. RE-USE the ability to create a toxic gas cloud at the cost of fuel. This ability can be RE-USED more than once and can be picked up to be REDEPLOYED.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/viper-skill2.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                TOXIC SCREEN
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a gas emitter launcher. FIRE to deploy a long line of gas emitters. RE-USE the ability to create a tall wall of toxic gas at the cost of fuel. This ability can be RE-USED more than once.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/viper-skill3.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                SNAKE BITE
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a chemical launcher. FIRE to launch a canister that shatters upon hitting the floor, creating a lingering chemical zone that damages and slows enemies.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/viper-skill4.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                VIPER’S PIT
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a chemical sprayer. FIRE to spray a chemical cloud in all directions around Viper, creating a large cloud that reduces the vision range and maximum health of players inside of it.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-wrap9">
-                <div class="skill-title">
-                    <h1>SKILLS</h1>
-                </div>
-                <div class="skill">
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/cypher-skill1.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                CYBER CAGE
-                            </h2>
-                            <p class="skill-info">
-                                INSTANTLY toss the cyber cage in front of Cypher. Activate to create a zone that blocks vision and slows enemies who pass through it.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/cypher-skill2.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                SPYCAM
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a spycam. FIRE to place the spycam at the targeted location. RE-USE this ability to take control of the camera’s view. While in control of the camera, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/cypher-skill3.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                TRAPWIRE
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a trapwire. FIRE to place a destructible and covert tripwire at the targeted location creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered, revealed, and dazed after a short period if they do not destroy the device in time.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/cypher-skill4.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                NEURAL THEFT
-                            </h2>
-                            <p class="skill-info">
-                                INSTANTLY use on a dead enemy player in your crosshairs to reveal the location of all living enemy players.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-wrap10">
-                <div class="skill-title">
-                    <h1>SKILLS</h1>
-                </div>
-                <div class="skill">
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/killjoy-skill1.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                ALARMBOT
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a covert Alarmbot. FIRE to deploy a bot that hunts down enemies that get in range. After reaching its target, the bot explodes, applying Vulernable. HOLD EQUIP to recall a deployed bot.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/killjoy-skill2.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                TURRET
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a Turret. FIRE to deploy a turret that fires at enemies in a 180 degree cone. HOLD EQUIP to recall the deployed turret.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/killjoy-skill3.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                NANOSWARM
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP a Nanoswarm grenade. FIRE to throw the grenade. Upon landing, the Nanoswarm goes covert. ACTIVATE the Nanoswarm to deploy a damaging swarm of nanobots.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill-detail">
-                        <div class="skill-img">
-                            <img src="images/killjoy-skill4.png" alt="">
-                        </div>
-                        <div class="skill-desc">
-                            <h2 class="skill-inner-title">
-                                LOCKDOWN
-                            </h2>
-                            <p class="skill-info">
-                                EQUIP the Lockdown device. FIRE to deploy the device. After a long windup, the device Detains all enemies caught in the radius. The device can be destroyed by enemies.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
+        <div class="next">
+          <img src="images/next.png" alt="" />
         </div>
+        <div class="pre">
+          <img src="images/pre.png" alt="" />
+        </div>
+      </div>
+
+      <div class="skill-section">
+        <div class="skill-wrap1">
+          <div class="skill-title">
+            <h1>SKILLS</h1>
+          </div>
+          <div class="skill">
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/sage-skill1.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">SLOW ORB</h2>
+                <p class="skill-info">EQUIP a slowing orb. FIRE to throw a slowing orb forward that detonates upon landing, creating a lingering field that slows players caught inside of it.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/sage-skill2.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">HEALING ORB</h2>
+                <p class="skill-info">EQUIP a healing orb. FIRE with your crosshairs over a damaged ally to activate a heal-over-time on them. ALT FIRE while Sage is damaged to activate a self heal-over-time.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/sage-skill3.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">BARRIER ORB</h2>
+                <p class="skill-info">EQUIP a barrier orb. FIRE places a solid wall. ALT FIRE rotates the targeter.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/sage-skill4.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">RESURRECT</h2>
+                <p class="skill-info">EQUIP a resurrection ability. FIRE with your crosshairs placed over a dead ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-wrap2">
+          <div class="skill-title">
+            <h1>SKILLS</h1>
+          </div>
+          <div class="skill">
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/jett-skill1.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">UPDRAFT</h2>
+                <p class="skill-info">INSTANTLY propel Jett high into the air.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/jett-skill2.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">TAILWIND</h2>
+                <p class="skill-info">INSTANTLY propel Jett in the direction she is moving. If Jett is standing still, she will propel forward.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/jett-skill3.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">CLOUDBURST</h2>
+                <p class="skill-info">INSTANTLY throw a projectile that expands into a brief vision-blocking cloud on impact with a surface. HOLD the ability key to curve the smoke in the direction of your crosshair.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/jett-skill4.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">BLADE STORM</h2>
+                <p class="skill-info">EQUIP a set of highly accurate knives that recharge on killing an opponent. FIRE to throw a single knife at your target. ALTERNATE FIRE to throw all remaining daggers at your target.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-wrap3">
+          <div class="skill-title">
+            <h1>SKILLS</h1>
+          </div>
+          <div class="skill">
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/brim-skill1.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">INCENDIARY</h2>
+                <p class="skill-info">EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/brim-skill2.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">SKY SMOKE</h2>
+                <p class="skill-info">EQUIP a tactical map. FIRE to set locations where Brimstone’s smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/brim-skill3.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">STIM BEACON</h2>
+                <p class="skill-info">EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/brim-skill4.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">ORBITAL STRIKE</h2>
+                <p class="skill-info">EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-wrap4">
+          <div class="skill-title">
+            <h1>SKILLS</h1>
+          </div>
+          <div class="skill">
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/sova-skill1.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">SHOCK BOLT</h2>
+                <p class="skill-info">
+                  EQUIP a bow with a shock bolt. FIRE to send the explosive forward, detonating upon collision and damaging players nearby. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this
+                  arrow.
+                </p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/sova-skill2.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">RECON BOLT</h2>
+                <p class="skill-info">
+                  EQUIP a bow with a recon bolt. FIRE to send the recon bolt forward, activating upon collision and revealing the location of nearby enemies caught in the line of sight of the bolt. HOLD FIRE to extend the range of the
+                  projectile. ALTERNATE FIRE to add up to two bounces to this arrow.
+                </p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/sova-skill3.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">OWL DRONE</h2>
+                <p class="skill-info">
+                  EQUIP an owl drone. FIRE to deploy and take control of movement of the drone. While in control of the drone, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart.
+                </p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/sova-skill4.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">HUNTER’S FURY</h2>
+                <p class="skill-info">
+                  EQUIP a bow with three long-range wall-piercing energy blasts. FIRE to release an energy blast in a line in front of Sova, dealing damage and revealing the location of enemies caught in the line. This ability can be
+                  RE-USED up to two more times while the ability timer is active.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-wrap5">
+          <div class="skill-title">
+            <h1>SKILLS</h1>
+          </div>
+          <div class="skill">
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/omen-skill1.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">PARANOIA</h2>
+                <p class="skill-info">INSTANTLY fire a shadow projectile forward, briefly reducing the vision range of all players it touches. This projectile can pass straight through walls.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/omen-skill2.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">DARK COVER</h2>
+                <p class="skill-info">
+                  EQUIP a shadow orb and see its range indicator. FIRE to throw the shadow orb to the marked location, creating a long-lasting shadow sphere that blocks vision. HOLD ALTERNATE FIRE while targeting to move the marker further
+                  away. HOLD the ability key with targeting to move the market closer.
+                </p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/omen-skill3.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">SHROUDED STEP</h2>
+                <p class="skill-info">EQUIP a shadow walk ability and see its range indicator. FIRE to begin a brief channel, then teleport to the marked location.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/omen-skill4.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">FROM THE SHADOWS</h2>
+                <p class="skill-info">EQUIP a tactical map. FIRE to begin teleporting to the selected location. While teleporting, Omen will appear as a Shade that can be destroyed by an enemy to cancel his teleport.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-wrap6">
+          <div class="skill-title">
+            <h1>SKILLS</h1>
+          </div>
+          <div class="skill">
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/reyna-skill1.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">DEVOUR</h2>
+                <p class="skill-info">
+                  Enemies killed by Reyna leave behind Soul Orbs that last 3 seconds. INSTANTLY consume a nearby soul orb, rapidly healing for a short duration. Health gained through this skill exceeding 100 will decay over time. If EMPRESS
+                  is active, this skill will automatically cast and not consume the orb.
+                </p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/reyna-skill2.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">DISMISS</h2>
+                <p class="skill-info">INSTANTLY consume a nearby soul orb, becoming intangible for a short duration. If EMPRESS is active, also become invisible.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/reyna-skill3.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">LEER</h2>
+                <p class="skill-info">EQUIP an ethereal destructible eye. ACTIVATE to cast the eye a short distance forward. The eye will Nearsight all enemies who look at it.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/reyna-skill4.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">EMPRESS</h2>
+                <p class="skill-info">INSTANTLY enter a frenzy, increasing firing speed, equip and reload speed dramatically. Scoring a kill renews the duration.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-wrap7">
+          <div class="skill-title">
+            <h1>SKILLS</h1>
+          </div>
+          <div class="skill">
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/phoenix-skill1.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">CURVEBALL</h2>
+                <p class="skill-info">
+                  EQUIP a flare orb that takes a curving path and detonates shortly after throwing. FIRE to curve the flare orb to the left, detonating and blinding any player who sees the orb. ALTERNATE FIRE to curve the flare orb to the
+                  right.
+                </p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/phoenix-skill2.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">HOT HANDS</h2>
+                <p class="skill-info">EQUIP a fireball. FIRE to throw a fireball that explodes after a set amount of time or upon hitting the ground, creating a lingering fire zone that damages enemies.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/phoenix-skill3.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">BLAZE</h2>
+                <p class="skill-info">
+                  EQUIP a flame wall. FIRE to create a line of flame that moves forward, creating a wall of fire that blocks vision and damages players passing through it. HOLD FIRE to bend the wall in the direction of your crosshair.
+                </p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/phoenix-skill4.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">RUN IT BACK</h2>
+                <p class="skill-info">INSTANTLY place a marker at Phoenix’s location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-wrap8">
+          <div class="skill-title">
+            <h1>SKILLS</h1>
+          </div>
+          <div class="skill">
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/viper-skill1.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">POISON CLOUD</h2>
+                <p class="skill-info">
+                  EQUIP a gas emitter. FIRE to throw the emitter that perpetually remains throughout the round. RE-USE the ability to create a toxic gas cloud at the cost of fuel. This ability can be RE-USED more than once and can be picked
+                  up to be REDEPLOYED.
+                </p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/viper-skill2.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">TOXIC SCREEN</h2>
+                <p class="skill-info">EQUIP a gas emitter launcher. FIRE to deploy a long line of gas emitters. RE-USE the ability to create a tall wall of toxic gas at the cost of fuel. This ability can be RE-USED more than once.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/viper-skill3.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">SNAKE BITE</h2>
+                <p class="skill-info">EQUIP a chemical launcher. FIRE to launch a canister that shatters upon hitting the floor, creating a lingering chemical zone that damages and slows enemies.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/viper-skill4.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">VIPER’S PIT</h2>
+                <p class="skill-info">EQUIP a chemical sprayer. FIRE to spray a chemical cloud in all directions around Viper, creating a large cloud that reduces the vision range and maximum health of players inside of it.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-wrap9">
+          <div class="skill-title">
+            <h1>SKILLS</h1>
+          </div>
+          <div class="skill">
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/cypher-skill1.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">CYBER CAGE</h2>
+                <p class="skill-info">INSTANTLY toss the cyber cage in front of Cypher. Activate to create a zone that blocks vision and slows enemies who pass through it.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/cypher-skill2.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">SPYCAM</h2>
+                <p class="skill-info">
+                  EQUIP a spycam. FIRE to place the spycam at the targeted location. RE-USE this ability to take control of the camera’s view. While in control of the camera, FIRE to shoot a marking dart. This dart will reveal the location
+                  of any player struck by the dart.
+                </p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/cypher-skill3.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">TRAPWIRE</h2>
+                <p class="skill-info">
+                  EQUIP a trapwire. FIRE to place a destructible and covert tripwire at the targeted location creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered,
+                  revealed, and dazed after a short period if they do not destroy the device in time.
+                </p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/cypher-skill4.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">NEURAL THEFT</h2>
+                <p class="skill-info">INSTANTLY use on a dead enemy player in your crosshairs to reveal the location of all living enemy players.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-wrap10">
+          <div class="skill-title">
+            <h1>SKILLS</h1>
+          </div>
+          <div class="skill">
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/killjoy-skill1.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">ALARMBOT</h2>
+                <p class="skill-info">EQUIP a covert Alarmbot. FIRE to deploy a bot that hunts down enemies that get in range. After reaching its target, the bot explodes, applying Vulernable. HOLD EQUIP to recall a deployed bot.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/killjoy-skill2.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">TURRET</h2>
+                <p class="skill-info">EQUIP a Turret. FIRE to deploy a turret that fires at enemies in a 180 degree cone. HOLD EQUIP to recall the deployed turret.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/killjoy-skill3.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">NANOSWARM</h2>
+                <p class="skill-info">EQUIP a Nanoswarm grenade. FIRE to throw the grenade. Upon landing, the Nanoswarm goes covert. ACTIVATE the Nanoswarm to deploy a damaging swarm of nanobots.</p>
+              </div>
+            </div>
+            <div class="skill-detail">
+              <div class="skill-img">
+                <img src="images/killjoy-skill4.png" alt="" />
+              </div>
+              <div class="skill-desc">
+                <h2 class="skill-inner-title">LOCKDOWN</h2>
+                <p class="skill-info">EQUIP the Lockdown device. FIRE to deploy the device. After a long windup, the device Detains all enemies caught in the radius. The device can be destroyed by enemies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- End of agent section -->
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="content">
-            <div class="left box">
-                <div class="logobawah">
-                    <img src="../logo/logo.png">
-                </div>
-                <div class="copyright">copyright &copy;2021 designed by Joan Andreas, Miracle Aurelia, Sheila Monica</div>
-            </div>
-    
-            <div class="center box">
-                <div class="headerfoot">About Us</div>
-                <div class="about">
-                    LaForant is First Person Shooter online game which will be officially released on 9th December 2021.
-                    This game is about strategy, teamwork, and agility. You have to attack and defend to win this game. Play
-                    this game with your friends to feel the excitement. You won't easily get bored cause this game has a lot
-                    of modes. Come and Join Us.
-                </div>
-                <div class="regis">
-                    <a href="../registration/registration.html" target="_blank">Pre-Register Now</a>
-                </div>
-                <div class="systemrequire">
-                    <a href="../system_requirement/specs.html" target="_blank">System Requirement</a>
-                </div>
-            </div>
-    
-            <div class="right box">
-                <div class="headerfoot">Contact Us</div>
-                <div class="sosmed">
-                    <div class="utube">
-                        <a href="https://www.youtube.com/" target="_blank"><img src="../socmed_icon/utube2.png" alt=""></a>
-                    </div>
-                    <div class="ig">
-                        <a href="https://www.instagram.com/" target="_blank"><img src="../socmed_icon/ig2.png" alt=""></a>
-                    </div>
-                    <div class="twitter">
-                        <a href="https://twitter.com/?lang=en-id" target="_blank"><img src="../socmed_icon/twitter2.png" alt=""></a>
-                    </div>
-                    <div class="fb">
-                        <a href="https://www.facebook.com/" target="_blank"><img src="../socmed_icon/fb2.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
+      <div class="content">
+        <div class="left box">
+          <div class="logobawah">
+            <img src="../logo/logo.png" />
+          </div>
+          <div class="copyright">copyright &copy;2021 All Rights Reserved</div>
         </div>
+
+        <div class="center box">
+          <div class="headerfoot">About Us</div>
+          <div class="about">
+            LaForant is First Person Shooter online game which will be officially released on 9th December 2021. This game is about strategy, teamwork, and agility. You have to attack and defend to win this game. Play this game with your
+            friends to feel the excitement. You won't easily get bored cause this game has a lot of modes. Come and Join Us.
+          </div>
+          <div class="regis">
+            <a href="../registration/registration.html" target="_blank">Pre-Register Now</a>
+          </div>
+          <div class="systemrequire">
+            <a href="../system_requirement/specs.html" target="_blank">System Requirement</a>
+          </div>
+        </div>
+
+        <div class="right box">
+          <div class="headerfoot">Contact Us</div>
+          <div class="sosmed">
+            <div class="utube">
+              <a href="https://www.youtube.com/" target="_blank"><img src="../socmed_icon/utube2.png" alt="" /></a>
+            </div>
+            <div class="ig">
+              <a href="https://www.instagram.com/" target="_blank"><img src="../socmed_icon/ig2.png" alt="" /></a>
+            </div>
+            <div class="twitter">
+              <a href="https://twitter.com/?lang=en-id" target="_blank"><img src="../socmed_icon/twitter2.png" alt="" /></a>
+            </div>
+            <div class="fb">
+              <a href="https://www.facebook.com/" target="_blank"><img src="../socmed_icon/fb2.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- End of footer -->
-</body>
+  </body>
 </html>
