@@ -1,0 +1,745 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 999;
+    position: fixed;
+}
+
+.menu-icon span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-icon span img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Menu-icon is labeled by a hamburger button 
+that will appear when screen is under or equal to 800px*/
+/* Label is used for checkbox so that when it is clicked
+it will display the navigation */
+.menu-icon, input[type="checkbox"], .nav-list label {
+    display: none;
+}
+
+.navbar .lf_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .lf_logo img {
+    height: 40px;
+    width: 55px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-item {
+    position: relative;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+#dummy {
+    display: none;
+}
+
+.nav-link {
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.down {
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-left: 0.7rem;
+}
+
+.nav-item:hover .nav-link {
+    color: #f85959;
+}
+
+.nav-item:hover .down {
+    border: solid #f85959;
+    border-width: 0 3px 3px 0;
+}
+
+.dropdown-content {
+    background-color: #f85959;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-right: 40px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    z-index: 999;
+    visibility: hidden;
+}
+
+.nav-item:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+.dropdown-link:hover {
+    color: #000000;
+}
+
+.dropdown-link:not(:last-child) {
+    margin-bottom: 1.3rem;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 950px) {
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .nav-link {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* Display hamburger button */
+    .menu-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    /* A close button */
+    #show-menu:checked ~ .menu-icon span::after {
+        content: "x";
+        font-size: 2rem;
+        color: #ffffff;
+    }
+
+    /* Replace hamburger button with close button 
+    so make it disappear */
+    #show-menu:checked ~ .menu-icon span img {
+        display: none;
+    }
+
+    /* Make the bar displayed vertically not horizontally
+    by changing from display: flex; to display: block; */
+    .navbar .nav-list {
+        display: block;
+        position: fixed;
+        background: #14181f;
+        height: 100%;
+        width: 100%;
+        top: 70px;
+        left: -100%;
+        margin-left: 0;
+        max-width: 22rem;
+        overflow-y: scroll;
+        z-index: 999;
+        transition: all 0.3s ease;
+    }
+
+    /* When hamburger button is clicked
+    make navigation bar visible */
+    #show-menu:checked ~ .nav-list {
+        left: 0%;
+    }
+
+    .nav-list li {
+        margin: 1rem;
+    }
+
+    .nav-list li a, 
+    .nav-list li label {
+        font-size: 1.25rem;
+        display: block;
+        padding: 8px 18px;
+        cursor: pointer;
+        color: #ffffff;
+        font-weight: bold;
+        line-height: 40px;
+    }
+
+    /* To make Navigation item shown before when screen is above 800px
+    disappear */
+    a#shown.nav-link {
+        display: none;
+    }
+
+    .dropdown-content {
+        opacity: 1;
+        visibility: visible;
+        max-height: 0px;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #show-info:checked ~ label,
+    #show-socmed:checked ~ label {
+        color: #f85959;
+    }
+
+    /* When the navigation item containing dropdown
+    is checked then display it by setting max-height to 100vh,
+    before it's 0*/
+    #show-info:checked ~ .dropdown-content,
+    #show-socmed:checked ~ .dropdown-content {
+        position: relative;
+        max-height: 100vh;
+    }
+
+    .nav-item {
+        padding: 0.5rem;
+    }
+
+    #dummy {
+        display: block;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    /* Making the navigation cover entire screen */
+    .navbar .nav-list {
+        max-width: 100vw;
+    }
+}
+/* End of nav bar */
+
+/* Landing Section */
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing video {
+    height: calc(100% - 70px);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    object-fit: cover;
+}
+
+.landing-text {
+    z-index: 998;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.see-button {
+    z-index: 998;
+    padding: 10px 8px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px 0;
+    letter-spacing: 1px;
+    border: 3px solid #b6b284;
+    background: linear-gradient(to right, transparent 50%, #b6b284 50%);
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.5s;
+    color: #ffffff;
+}
+
+.see-button:hover {
+    background-position: right;
+}
+@media screen and (max-width: 500px) {
+    .landing-text {
+        font-size: 1rem;
+    }
+}
+/* End of Landing Section */
+
+/* Registration Form */
+.form-container {
+    padding: 2rem;
+    background: url(images/bg3.png);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    background: url(images/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.rules h1 {
+    padding: 1rem;
+}
+
+.rules p {
+    margin: 1rem;
+}
+
+h2 {
+    margin: 1rem;
+    color: #ffffff;
+}
+
+.form-container form {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: auto;
+    background: url(images/bg.jpg);
+}
+
+.form-container form input {
+    outline: none;
+    border: none;
+    height: 2rem;
+    padding: 0 10px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.input-msg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.input-msg input {
+    font-size: 0.75rem;
+    background: rgba( 255, 255, 255, 0);
+    color: #ffffff;
+}
+
+/* Change placeholder text color */
+::placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+}
+  
+:-ms-input-placeholder {
+    color: #ffffff;
+}
+  
+::-ms-input-placeholder {
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.container label {
+    color: #ffffff;
+    font-size: 0.8rem;
+}
+
+img {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.acc, .deny {
+    width: 1.3rem;
+    height: 1.3rem;
+    visibility: hidden;
+    position: absolute;
+    left: 100%;
+}
+
+.icon {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* When input is valid set accepted icon to visible */
+.input-msg.valid .acc {
+	visibility: visible;
+}
+
+/* When input is invalid set denied icon to visible */
+.input-msg.invalid .deny {
+	visibility: visible;
+}
+
+/* Error message */
+.input-msg small {
+    color: #ff0000;
+	position: absolute;
+	left: 5%;
+    top: 110%;
+	visibility: hidden;
+    font-size: 0.7rem;
+}
+
+/* When input is invalid display error message */
+.input-msg.invalid small {
+    visibility: visible;
+}
+
+/* Input valid, make line colored green */
+.input-msg.valid input {
+    border-bottom: 1px solid #0bc439;
+}
+
+/* Input invalid, make line colored red*/
+.input-msg.invalid input {
+    border-bottom: 1px solid #ff0000;
+}
+
+form input {
+    margin: 0;
+    width: 70%;
+}
+
+.container input {
+    width: 90%;
+}
+
+form input[type="submit"] {
+    cursor: pointer;
+    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+    margin-top: 25px;
+    border-radius: 50px;
+    color: #ffffff;
+    margin: 1rem;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+#show-check input {
+    display: block;
+}
+
+input.small {
+    width: 15px;
+    height: 15px;
+    margin-right: 0.5rem;
+}
+
+.checkbox {
+    position: absolute;
+    right: 7%;
+}
+
+/* Change default checkbox image */
+.checkbox label {
+    background: url(images/eyes.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+}
+
+/* When it is checked change it to slashed eyes,
+indicating that when slashed eyes is clicked the
+checkbox for show password is unchecked so it won't 
+display the pass anymore */
+#show-pass:checked + label {
+    background: url(images/eye-slash.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#show-pass2:checked + label {
+    background: url(images/eye-slash.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#show-check input, #show-check label {
+    cursor: pointer;
+}
+
+/* Responsive Registration Form */
+@media (min-height: 1090px) {
+    .form-container {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .form-container {
+        flex-direction: column;
+    }
+    .form-container form {
+        width: 100%;
+    }
+    .rules {
+        width: 100%;
+    }
+    .checkbox label {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    .icon {
+        display: none;
+    }
+    .container {
+        margin: 0.9rem;
+    }
+    .input-msg {
+        width: 95%;
+    }
+    .acc, .deny {
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 280px) {
+    .input-msg input {
+        font-size: 0.6rem;
+    }
+    .checkbox label {
+        width: 10px;
+        height: 10px;
+    }
+    .input-msg small {
+        font-size: 0.55rem;
+    }
+}
+/* End of registration form */
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: #16151a;
+    padding: 40px 0;
+}
+
+.content .box {
+    padding: 10px 20px;
+}
+
+.left .logobawah img {
+    width: 15rem;
+    height: auto;
+}
+
+.content {
+    display: flex;
+}
+
+.box {
+    width: 33.3%;
+}
+
+.left, .center, .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    text-align: center;
+}
+
+.copyright {
+    color: white;
+    padding: 1rem 0;
+    font-size: 10px;
+}
+
+.about {
+    color: white;
+    font-size: 14px;
+    justify-content: space-evenly;
+    text-decoration: none;
+    padding-bottom: 20px;
+    text-align: justify;
+    line-height: 17px;
+}
+
+.headerfoot {
+    color: white;
+    font-size: 30px;
+}
+
+.center a {
+    color: #C7C6C1;
+    font-size: 15px;
+    text-decoration: none;   
+}
+
+.sosmed {
+    display: flex;
+}
+
+.utube, .ig, .twitter, .fb {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    /* box-shadow: 0 0.5rem 1rem 0 rgba(31, 38, 135, 0.37); */
+}
+
+.utube {
+    border: 2px solid #FF0000;
+}
+
+.ig {
+    border: 2px solid #C13584;
+}
+
+.twitter {
+    border: 2px solid #1DA1F2;
+}
+
+.fb {
+    border: 2px solid #3b5998;
+}
+
+.utube img, .ig img, .twitter img, .fb img {
+    padding: 0.7rem;
+    width: 100%;
+    height: auto;
+}
+
+.sosmed {
+    margin-top: 1rem;
+}
+
+.sosmed div:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.utube:hover {
+    background-color: #FF0000;
+    transition: 0.5s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(255, 0, 0, 0.6);
+}
+
+.ig:hover {
+    background-color: #C13584;
+    transition: 0.5s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(255, 0, 191, 0.6);
+}
+
+.twitter:hover {
+    background-color: #1DA1F2;
+    transition: 0.5s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 195, 255, 0.6);
+}
+
+.fb:hover {
+    background-color: #3b5998;
+    transition: 0.5s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(80, 90, 226, 0.6);
+}
+
+.center .regis a:hover {
+    color: #ffc107;
+    transition: 0.5s;
+}
+
+.center .systemrequire a:hover {
+    color: #ffc107;
+    transition: 0.5s;
+}
+
+/* Responsive Footer */
+@media (max-width: 800px) {
+    .footer .content {
+        flex-direction: column;
+    }
+    .box {
+        width: 100%;
+    }
+    .left, .center, .right {
+        justify-content: center;
+        align-items: center;
+    }
+    .about {
+        font-size: 13px;
+    }
+    .center a {
+        font-size: 14px;
+    }
+    .headerfoot {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .left .logobawah img {
+        width: 13rem;
+        height: 13rem;
+    }
+}
+/* End of footer */

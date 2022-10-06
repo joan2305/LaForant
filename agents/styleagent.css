@@ -1,0 +1,928 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 999;
+    position: fixed;
+}
+
+.menu-icon span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-icon span img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Menu-icon is labeled by a hamburger button 
+that will appear when screen is under or equal to 800px*/
+/* Label is used for checkbox so that when it is clicked
+it will display the navigation */
+.menu-icon, input[type="checkbox"], .nav-list label {
+    display: none;
+}
+
+.navbar .lf_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .lf_logo img {
+    height: 40px;
+    width: 55px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-item {
+    position: relative;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+#dummy {
+    display: none;
+}
+
+.nav-link {
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.down {
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-left: 0.7rem;
+}
+
+.nav-item:hover .nav-link {
+    color: #f85959;
+}
+
+.nav-item:hover .down {
+    border: solid #f85959;
+    border-width: 0 3px 3px 0;
+}
+
+.dropdown-content {
+    background-color: #f85959;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-right: 40px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    z-index: 999;
+    visibility: hidden;
+}
+
+.nav-item:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+.dropdown-link:hover {
+    color: #000000;
+}
+
+.dropdown-link:not(:last-child) {
+    margin-bottom: 1.3rem;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 950px) {
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .nav-link {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* Display hamburger button */
+    .menu-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    /* A close button */
+    #show-menu:checked ~ .menu-icon span::after {
+        content: "x";
+        font-size: 2rem;
+        color: #ffffff;
+    }
+
+    /* Replace hamburger button with close button 
+    so make it disappear */
+    #show-menu:checked ~ .menu-icon span img {
+        display: none;
+    }
+
+    /* Make the bar displayed vertically not horizontally
+    by changing from display: flex; to display: block; */
+    .navbar .nav-list {
+        display: block;
+        position: fixed;
+        background: #14181f;
+        height: 100%;
+        width: 100%;
+        top: 70px;
+        left: -100%;
+        margin-left: 0;
+        max-width: 22rem;
+        overflow-y: scroll;
+        z-index: 999;
+        transition: all 0.3s ease;
+    }
+
+    /* When hamburger button is clicked
+    make navigation bar visible */
+    #show-menu:checked ~ .nav-list {
+        left: 0%;
+    }
+
+    .nav-list li {
+        margin: 1rem;
+    }
+
+    .nav-list li a, 
+    .nav-list li label {
+        font-size: 1.25rem;
+        display: block;
+        padding: 8px 18px;
+        cursor: pointer;
+        color: #ffffff;
+        font-weight: bold;
+        line-height: 40px;
+    }
+
+    /* To make Navigation item shown before when screen is above 800px
+    disappear */
+    a#shown.nav-link {
+        display: none;
+    }
+
+    .dropdown-content {
+        opacity: 1;
+        visibility: visible;
+        max-height: 0px;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #show-info:checked ~ label,
+    #show-socmed:checked ~ label {
+        color: #f85959;
+    }
+
+    /* When the navigation item containing dropdown
+    is checked then display it by setting max-height to 100vh,
+    before it's 0*/
+    #show-info:checked ~ .dropdown-content,
+    #show-socmed:checked ~ .dropdown-content {
+        position: relative;
+        max-height: 100vh;
+    }
+
+    .nav-item {
+        padding: 0.5rem;
+    }
+
+    #dummy {
+        display: block;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    /* Making the navigation cover entire screen */
+    .navbar .nav-list {
+        max-width: 100vw;
+    }
+}
+/* End of nav bar */
+
+/* Landing Section */
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing video {
+    height: calc(100% - 70px);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    object-fit: cover;
+}
+
+.landing-text {
+    z-index: 998;
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+.see-button {
+    z-index: 998;
+    padding: 10px 8px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px 0;
+    letter-spacing: 1px;
+    border: 3px solid #b6b284;
+    background: linear-gradient(to right, transparent 50%, #b6b284 50%);
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.5s;
+    color: #ffffff;;
+}
+
+.see-button:hover {
+    background-position: right;
+}
+@media screen and (max-width: 500px) {
+    .landing-text {
+        font-size: 2rem;
+    }
+}
+/* End of Landing Section */
+
+/* Agent Section */
+.agent-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+}
+
+.agent-section video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+.dot-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 998;
+}
+
+.dots img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.dot1.active, .dot2.active, .dot3.active, 
+.dot4.active, .dot5.active, .dot6.active,
+.dot7.active, .dot8.active, .dot9.active,
+.dot10.active {
+    background-color: #b6b284;
+    transform: scale(1.2);
+}
+
+.dots button:hover {
+    background-color: rgb(0, 255, 255, 0.37);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.img-section {
+    background: url(images/pattern.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 35rem;
+    width: 30rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agents{
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    /* z-index: 99; */
+    animation: zoom-inout 4s linear infinite;
+}
+
+/* Setting the agents images that are not meant
+to be displayed hidden, because .img-section's overflow
+is hidden, will change when next/prev agent function
+is called (JS involved) */
+.a1 {
+    top: 5%;
+}
+
+.a2 {
+    top: 105%;
+}
+
+.a3 {
+    top: 205%;
+}
+
+.a4 {
+    top: 305%;
+}
+
+.a5 {
+    top: 405%;
+}
+
+.a6 {
+    top:505%
+}
+
+.a7 {
+    top: 605%;
+}
+
+.a8 {
+    top: 705%;
+}
+
+.a9 {
+    top: 805%;
+}
+
+.a10 {
+    top: 905%;
+}
+
+/* Animation to make agent zoom in and out */
+@keyframes zoom-inout{
+    0%{
+        transform: scale(1, 1);
+    }
+    50%{
+        transform: scale(1.07, 1.07);
+    }
+    100%{
+        transform: scale(1, 1);
+    }
+}
+
+.pre,.next{
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    cursor: pointer;
+    z-index: 998;
+}
+
+.pre {
+    left: 5%;
+    top: 30%;
+}
+
+.next {
+    right: 5%;
+    top: 30%;
+}
+
+.next img, .pre img{
+    height: 100%;
+    width: 100%;
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 30rem;
+    z-index: 998;
+}
+
+.agent1 {
+    height: auto;
+    width: 75%;
+}
+
+/* Making info of agents that are not displayed
+hidden, will change when next/prev agent function
+is called (JS involved) */
+.agent2, .agent3, .agent4, .agent5, .agent6,
+.agent7, .agent8, .agent9, .agent10 {
+    height: auto;
+    width: 75%;
+    display: none;
+}
+
+.name {
+    height: 50px;
+    font-size: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.agent-name {
+    animation: slider 6s ease-in-out infinite;
+    color: #b6b284;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+}
+
+/* Animation to make .agent-name's display
+switch from agent's name to role */
+@keyframes slider {
+    0% {
+        top: -45px;
+    }
+    40% {
+        top: -45px;
+    }
+    70% {
+        top: 0px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+.bio {
+    font-size: 1rem;
+    color:white;
+    margin-top: 0.625rem;
+    margin-left: 0.32rem;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0.5rem 2rem 0 rgba(31, 38, 135, 0.37);
+    border-radius: 0.625rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.bio p {
+    padding: 1rem;
+}
+
+@keyframes slider2 {
+    0% {
+        top: -30px;
+    }
+    40% {
+        top: -30px;
+    }
+    70% {
+        top: 0px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+.skill-section {
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.skill-wrap1, .skill-wrap2, .skill-wrap3,
+.skill-wrap4, .skill-wrap5, .skill-wrap6,
+.skill-wrap7, .skill-wrap8, .skill-wrap9,
+.skill-wrap10 {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Making skill of agents that are not displayed
+hidden, will change when next/prev agent function
+is called (JS involved) */
+.skill-wrap2, .skill-wrap3,
+.skill-wrap4, .skill-wrap5, .skill-wrap6,
+.skill-wrap7, .skill-wrap8, .skill-wrap9,
+.skill-wrap10 {
+    display: none;
+}
+
+.skill-title {
+    padding: 2rem;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill {
+    padding-bottom: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-img img {
+    height: 128px;
+    width: 128px;
+}
+
+.skill-detail {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0.5rem 2rem 0 rgba(31, 38, 135, 0.37);
+    margin: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.skill-detail .skill-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Top set to 100% to make it hidden,
+will change when user hover */
+.skill-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    color: #171744;
+    position: absolute;
+    top: 100%;
+    transition: 1s;
+}
+
+.skill-desc .skill-inner-title {
+    margin-bottom: 1rem;
+}
+
+.skill-desc .skill-inner-title {
+    text-align: center;
+}
+
+.skill-desc .skill-info {
+    padding: 0 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Make skill description visible
+when user hover */
+.skill-detail:hover .skill-desc {
+    top: 0;
+}
+
+/* Responsive Agent Section */
+@media screen and (max-width: 1200px) {
+    .pre {
+        left: 2%;
+    }
+    .next {
+        right: 2%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .pre {
+        left: 0;
+    }
+    .next {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .img-section {
+        width: 22rem;
+        height: 25rem;
+    }
+    .info-section {
+        width: 25rem;
+        height: auto
+    }
+    .pre, .next {
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main {
+        flex-direction: column;
+    }
+    .info-section{
+        width: 100%;
+    }
+    .pre {
+        left: 10%;
+    }
+    .next {
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pre, .next {
+        height: 2rem;
+        width: 2rem;
+    }
+    .dots {
+        padding: 0.5rem;
+    }
+    .dots img {
+        width: 2rem;
+        height: 2rem;
+        margin: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .img-section {
+        width: 15rem;
+        height: 18rem;
+    }
+    .agent-name {
+        font-size: 27px;
+        animation: slider2 6s ease-in-out infinite;
+    }
+    .name {
+        height: 30px;
+    }
+    .pre, .next {
+        top: 20%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .pre {
+        left: 2%;
+    }
+    .next {
+        right: 2%;
+    }
+    .pre, .next {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .skill-desc .skill-info {
+        font-size: 0.8rem;
+    }
+    .skill-desc .skill-inner-title {
+        font-size: 1rem;
+    }
+}
+/* End of agent section */
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: #16151a;
+    padding: 40px 0;
+}
+
+.content .box {
+    padding: 10px 20px;
+}
+
+.left .logobawah img {
+    width: 15rem;
+    height: auto;
+}
+
+.content {
+    display: flex;
+}
+
+.box {
+    width: 33.3%;
+}
+
+.left, .center, .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    text-align: center;
+}
+
+.copyright {
+    color: white;
+    padding: 1rem 0;
+    font-size: 10px;
+}
+
+.about {
+    color: white;
+    font-size: 14px;
+    justify-content: space-evenly;
+    text-decoration: none;
+    padding-bottom: 20px;
+    text-align: justify;
+    line-height: 17px;
+}
+
+.headerfoot {
+    color: white;
+    font-size: 30px;
+}
+
+.center a {
+    color: #C7C6C1;
+    font-size: 15px;
+    text-decoration: none;   
+}
+
+.sosmed {
+    display: flex;
+}
+
+.utube, .ig, .twitter, .fb {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    /* box-shadow: 0 0.5rem 1rem 0 rgba(31, 38, 135, 0.37); */
+}
+
+.utube {
+    border: 2px solid #FF0000;
+}
+
+.ig {
+    border: 2px solid #C13584;
+}
+
+.twitter {
+    border: 2px solid #1DA1F2;
+}
+
+.fb {
+    border: 2px solid #3b5998;
+}
+
+.utube img, .ig img, .twitter img, .fb img {
+    padding: 0.7rem;
+    width: 100%;
+}
+
+.sosmed {
+    margin-top: 1rem;
+}
+
+.sosmed div:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.utube:hover {
+    background-color: #FF0000;
+    transition: 0.5s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(255, 0, 0, 0.6);
+}
+
+.ig:hover {
+    background-color: #C13584;
+    transition: 0.5s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(255, 0, 191, 0.6);
+}
+
+.twitter:hover {
+    background-color: #1DA1F2;
+    transition: 0.5s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 195, 255, 0.6);
+}
+
+.fb:hover {
+    background-color: #3b5998;
+    transition: 0.5s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(80, 90, 226, 0.6);
+}
+
+.center .regis a:hover {
+    color: #ffc107;
+    transition: 0.5s;
+}
+
+.center .systemrequire a:hover {
+    color: #ffc107;
+    transition: 0.5s;
+}
+
+/* Responsive Footer */
+@media (max-width: 800px) {
+    .footer .content {
+        flex-direction: column;
+    }
+    .box {
+        width: 100%;
+    }
+    .left, .center, .right {
+        justify-content: center;
+        align-items: center;
+    }
+    .about {
+        font-size: 13px;
+    }
+    .center a {
+        font-size: 14px;
+    }
+    .headerfoot {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .left .logobawah img {
+        width: 13rem;
+        height: 13rem;
+    }
+}
+/* End of footer */
